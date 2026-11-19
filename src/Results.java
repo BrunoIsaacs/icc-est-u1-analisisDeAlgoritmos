@@ -35,13 +35,12 @@ public class Results {
     }
 
     @Override 
-    public String toString() {
-       long seconds = duration / 1000000000;
-       return "Results{" +
-               "nombre='" + nombre + '\'' +
-               ", duration=" + duration + ", " + seconds + " s" +
-               ", sample='" + sample + '\'' +
-               '}';
+public String toString() {
+    double seconds = duration / 1_000_000_000.0; 
+    return "Results{" +
+            "nombre='" + nombre + '\'' +
+            ", duration=" + duration + " nanoseconds (" + seconds + " seconds)" +
+            ", sample='" + sample + '\'' +
+            '}';
     }
-    
 }
